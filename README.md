@@ -2,22 +2,32 @@
 
 > Personal Software Engineering Portfolio
 
-A personal portfolio presenting Iman's software engineering experience, selected work, engineering practices, and technical explorations.
-
 ## Project status
 
-Early foundation / design exploration. Scope and content are expected to evolve before public launch.
+Development foundation in progress. The initial scaffold uses React, TypeScript, and Vite.
+
+## Requirements
+
+- Node.js 22 LTS
+- npm 10 or compatible
 
 ## Local development
-
-The planned application stack is React, TypeScript, and Vite.
 
 ```bash
 npm install
 npm run dev
 ```
 
-The exact scripts and dependency versions will be established when the application scaffold is initialized.
+## Verification
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+```
+
+Use `npm ci` after the first dependency lockfile has been generated and committed.
 
 ## Project documentation
 

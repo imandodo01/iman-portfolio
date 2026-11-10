@@ -1,0 +1,30 @@
+.shell {
+  width: min(100% - 3rem, 60rem);
+  margin-inline: auto;
+  padding-block: clamp(5rem, 14vh, 10rem);
+}
+.eyebrow {
+  color: var(--color-brass);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.shell h1 {
+  margin-block: 1rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+.description {
+  max-width: 42rem;
+  color: var(--color-ivory);
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+}
+.note {
+  max-width: 38rem;
+  margin-top: 3rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}

@@ -9,7 +9,7 @@ Development foundation in progress. The initial scaffold uses React, TypeScript,
 ## Requirements
 
 - Node.js 22 LTS
-- npm 10 or compatible
+- npm 10 or compatible (npm 11.6.0 is recommended for the validated dependency tree)
 
 ## Local development
 
@@ -27,7 +27,13 @@ npm run test
 npm run build
 ```
 
-Use `npm ci` after the first dependency lockfile has been generated and committed.
+After generating and committing `package-lock.json`, use `npm ci` for reproducible installs.
+
+## Dependency security note
+
+The dependency tree includes a scoped npm override for `minimatch@11.0.1` under `@typescript-eslint/typescript-estree`. This addresses the known minimatch advisory affecting the version range requested by the current TypeScript-ESLint dependency. The override was validated in the separate Clementine Work repository with a clean install, zero-vulnerability audit, lint, typecheck, tests, and production build. Re-run those checks in this repository before considering the setup verified here.
+
+See [dependency notes](docs/DEPENDENCY_NOTES.md) for the rationale and maintenance condition.
 
 ## Project documentation
 

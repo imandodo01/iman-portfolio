@@ -1,153 +1,154 @@
+import { useState } from "react";
 import styles from "./App.module.css";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Notes", href: "#notes" },
+  { label: "Home", href: "#home", icon: "home" },
+  { label: "Projects", href: "#projects", icon: "projects" },
+  { label: "Experience", href: "#experience", icon: "experience" },
+  { label: "About", href: "#about", icon: "about" },
+  { label: "Notes", href: "#notes", icon: "notes" },
 ];
 
-export default function App() {
+function Icon({ name }: { name: string }) {
+  const paths: Record<string, string> = {
+    home: "M3 10.5 12 3l9 7.5M5.5 9.5V21h13V9.5M9 21v-7h6v7",
+    projects: "M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z",
+    experience: "M3 7h18M5 7V4h14v3M5 7v13h14V7M9 11h6M9 15h6",
+    about: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21a8 8 0 0 1 16 0",
+    notes: "M5 3h11l4 4v14H5zM16 3v5h4M8 12h8M8 16h8",
+    collapse: "M15 18l-6-6 6-6",
+    menu: "M3 6h18M3 12h18M3 18h18",
+    close: "M6 6l12 12M18 6 6 18",
+  };
   return (
-    <div className={styles.siteShell}>
-      <a className={styles.skipLink} href="#main">Skip to content</a>
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d={paths[name] ?? paths.home} />
+    </svg>
+  );
+}
 
-      <header className={styles.header}>
-        <a className={styles.wordmark} href="#home" aria-label="Iman, home">
-          <span className={styles.wordmarkMark}>I.</span>
-          <span>IMAN</span>
+export default function App() {
+  const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [active, setActive] = useState("#home");
+
+  const closeMobile = () => setMobileOpen(false);
+
+  return (
+    <div className={styles.appShell}>
+      <a className={styles.skipLink} href="#main">Skip to content</a>
+      <button
+        className={styles.mobileMenu}
+        type="button"
+        aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+        aria-expanded={mobileOpen}
+        onClick={() => setMobileOpen((open) => !open)}
+      >
+        <Icon name={mobileOpen ? "close" : "menu"} />
+      </button>
+      {mobileOpen && <button className={styles.scrim} type="button" aria-label="Close navigation" onClick={closeMobile} />}
+
+      <aside className={`${styles.sidebar} ${collapsed ? styles.sidebarCollapsed : ""} ${mobileOpen ? styles.sidebarOpen : ""}`}>
+        <a className={styles.brand} href="#home" onClick={() => { setActive("#home"); closeMobile(); }}>
+          <span className={styles.brandMark}>I.</span>
+          <span className={styles.brandText}>IMAN<small>SOFTWARE ENGINEERING</small></span>
         </a>
         <nav className={styles.navigation} aria-label="Main navigation">
           {navigation.map((item) => (
-            <a key={item.href} href={item.href}>{item.label}</a>
+            <a
+              key={item.href}
+              href={item.href}
+              className={active === item.href ? styles.navActive : ""}
+              aria-current={active === item.href ? "location" : undefined}
+              title={collapsed ? item.label : undefined}
+              onClick={() => { setActive(item.href); closeMobile(); }}
+            >
+              <Icon name={item.icon} />
+              <span>{item.label}</span>
+            </a>
           ))}
         </nav>
-        <span className={styles.headerMeta}>SOFTWARE ENGINEERING</span>
-      </header>
+        <div className={styles.sidebarFoot}>
+          <span>PERSONAL ENGINEERING JOURNAL</span>
+          <span>INDEPENDENT PRACTICE</span>
+        </div>
+        <button className={styles.collapseButton} type="button" onClick={() => setCollapsed((value) => !value)} aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"} aria-expanded={!collapsed}>
+          <Icon name="collapse" />
+          <span>{collapsed ? "Expand" : "Collapse"}</span>
+        </button>
+      </aside>
 
-      <main id="main">
-        <section className={styles.hero} id="home" aria-labelledby="hero-title">
+      <main id="main" className={styles.mainContent}>
+        <section id="home" className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}><span /> Independent practice / 2026</p>
-            <h1 id="hero-title">Building software<br /><em>with intent.</em></h1>
+            <p className={styles.eyebrow}>PERSONAL ENGINEERING JOURNAL</p>
+            <h1>I’m Iman.<br /><em>A software engineer.</em></h1>
             <p className={styles.heroIntro}>
-              I’m Iman — a software engineer focused on backend systems,
-              practical tools, and thoughtful digital experiences.
+              I build and maintain backend systems, business applications, and practical tools with a focus on reliable, maintainable solutions.
             </p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryLink} href="#projects">Explore selected work <span aria-hidden="true">↗</span></a>
-              <a className={styles.secondaryLink} href="#about">A little about me <span aria-hidden="true">↓</span></a>
+              <a className={styles.primaryAction} href="#projects">Explore selected work <span aria-hidden="true">↗</span></a>
+              <a className={styles.secondaryAction} href="#about">About me <span aria-hidden="true">↓</span></a>
             </div>
           </div>
-
-          <div className={styles.heroAside} aria-hidden="true">
-            <img className={styles.heroWatermark} src="/images/steampunk-skull.png" alt="" />
+          <div className={styles.heroVisual} aria-hidden="true">
+            <img src="/images/steampunk-skull.png" alt="" />
+            <span>ENGINEERING<br />IN PRACTICE</span>
           </div>
-          <div className={styles.heroFoot}>
-            <span>PERSONAL ENGINEERING JOURNAL</span>
-            <span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span>
+          <div className={styles.focusStrip}>
+            <span>BACKEND SYSTEMS</span><span>API &amp; INTEGRATION</span><span>PRACTICAL TOOLS</span>
           </div>
         </section>
 
-        <section className={styles.section} id="about" aria-labelledby="about-title">
-          <div className={styles.sectionIndex}>01 / ABOUT</div>
-          <div className={styles.sectionBody}>
-            <p className={styles.eyebrow}>The person behind the work</p>
-            <h2 id="about-title">Curiosity is useful.<br /><em>Clarity is essential.</em></h2>
-            <div className={styles.twoColumn}>
-              <p className={styles.lead}>
-                I enjoy understanding how things work, finding the real problem,
-                and building software that makes everyday work more reliable.
-              </p>
-              <p className={styles.bodyCopy}>
-                My work has centered on backend development, APIs, business
-                applications, and the connections between systems. I value
-                maintainable solutions, clear trade-offs, and steady improvement
-                over unnecessary complexity.
-              </p>
+        <section id="projects" className={styles.workSection}>
+          <div className={styles.sectionHeading}>
+            <div><p className={styles.eyebrow}>01 / SELECTED WORK</p><h2>Built with purpose.</h2></div>
+            <span className={styles.sectionMeta}>PERSONAL PROJECT</span>
+          </div>
+          <article className={styles.projectFeature}>
+            <a className={styles.projectImage} href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer" aria-label="Visit Qraft">
+              <img src="/images/portofolio-qraft.png" alt="Qraft application interface showing its QR code and vCard tools" loading="lazy" />
+            </a>
+            <div className={styles.projectInfo}>
+              <p className={styles.eyebrow}>PERSONAL PRODUCT · RELEASED 2026</p>
+              <h3>Qraft</h3>
+              <p>A local-first digital toolbox with nine browser-based tools for QR codes, contact cards, developer utilities, and everyday text tasks.</p>
+              <div className={styles.tags}><span>TypeScript</span><span>HTML &amp; CSS</span><span>Vite</span></div>
+              <div className={styles.projectLinks}>
+                <a href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer">Visit product ↗</a>
+                <a href="https://github.com/imandodo01/Qraft" target="_blank" rel="noreferrer">Repository ↗</a>
+              </div>
             </div>
-          </div>
+          </article>
         </section>
 
-        <section className={styles.section} id="experience" aria-labelledby="experience-title">
-          <div className={styles.sectionIndex}>02 / EXPERIENCE</div>
-          <div className={styles.sectionBody}>
-            <p className={styles.eyebrow}>Where I apply the craft</p>
-            <h2 id="experience-title">Engineering in<br /><em>the real world.</em></h2>
-            <div className={styles.experienceRow}>
-              <div>
-                <span className={styles.metaLabel}>CURRENT FOCUS</span>
-                <h3>Backend Development</h3>
-              </div>
-              <p className={styles.bodyCopy}>
-                Building and maintaining business systems, REST APIs, and
-                web/mobile application workflows. Specific roles, dates, and
-                project contributions will be documented with their proper context.
-              </p>
-              <span className={styles.rowNumber}>01</span>
-            </div>
-          </div>
+        <section className={styles.overviewGrid} aria-label="More about Iman's work">
+          <article id="experience" className={styles.overviewPanel}>
+            <p className={styles.eyebrow}>02 / EXPERIENCE</p>
+            <h2>Engineering at work.</h2>
+            <p>Backend development across business systems, REST APIs, and web/mobile application workflows.</p>
+            <a href="#about">How I approach engineering ↗</a>
+          </article>
+          <article id="notes" className={styles.overviewPanel}>
+            <p className={styles.eyebrow}>03 / ENGINEERING NOTES</p>
+            <h2>Notes from the workbench.</h2>
+            <p>Technical lessons and implementation notes will be added when they are ready to share.</p>
+            <span className={styles.quietMeta}>NO ARTICLES PUBLISHED YET</span>
+          </article>
         </section>
 
-        <section className={styles.section} id="projects" aria-labelledby="projects-title">
-          <div className={styles.sectionIndex}>03 / SELECTED WORK</div>
-          <div className={styles.sectionBody}>
-            <p className={styles.eyebrow}>A few things made with purpose</p>
-            <h2 id="projects-title">Small ideas.<br /><em>Useful outcomes.</em></h2>
-            <article className={styles.projectCard}>
-              <div className={styles.projectVisual}>
-                <img
-                  className={styles.projectScreenshot}
-                  src="/images/portofolio-qraft.png"
-                  alt="Qraft application interface showing its QR code and vCard tools"
-                  loading="lazy"
-                />
-              </div>
-              <div className={styles.projectDetails}>
-                <div className={styles.projectMeta}>
-                  <span>01 — PERSONAL PRODUCT</span>
-                  <span>RELEASED · 2026</span>
-                </div>
-                <h3>Qraft</h3>
-                <p className={styles.bodyCopy}>
-                  A local-first digital toolbox with nine browser-based tools for
-                  QR codes, contact cards, developer utilities, and everyday text
-                  tasks. Core tools process user content locally, without an
-                  account or application backend.
-                </p>
-                <div className={styles.tags}><span>TypeScript</span><span>HTML &amp; CSS</span><span>Vite</span></div>
-                <div className={styles.projectLinks}>
-                  <a className={styles.textLink} href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer">
-                    Visit Qraft <span aria-hidden="true">↗</span>
-                  </a>
-                  <a className={styles.textLink} href="https://github.com/imandodo01/Qraft" target="_blank" rel="noreferrer">
-                    View repository <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
+        <section id="about" className={styles.aboutSection}>
+          <p className={styles.eyebrow}>04 / ABOUT</p>
+          <p className={styles.aboutStatement}>Curiosity helps find the problem. <em>Clarity helps build the solution.</em></p>
+          <p className={styles.aboutCopy}>I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.</p>
         </section>
 
-        <section className={styles.section} id="notes" aria-labelledby="notes-title">
-          <div className={styles.sectionIndex}>04 / ENGINEERING NOTES</div>
-          <div className={styles.sectionBody}>
-            <p className={styles.eyebrow}>Thinking out loud, carefully</p>
-            <h2 id="notes-title">Notes from<br /><em>the workbench.</em></h2>
-            <p className={styles.lead}>
-              A place for technical lessons, implementation notes, and ideas
-              worth revisiting. Published writing will appear here as it is ready.
-            </p>
-          </div>
-        </section>
+        <footer className={styles.footer}>
+          <a className={styles.footerBrand} href="#home">IMAN<span> / SOFTWARE ENGINEERING</span></a>
+          <a href="#home">BACK TO TOP ↑</a>
+          <span>© 2026</span>
+        </footer>
       </main>
-
-      <footer className={styles.footer}>
-        <a className={styles.wordmark} href="#home"><span className={styles.wordmarkMark}>I.</span><span>IMAN</span></a>
-        <p>Independent Software Engineering Portfolio</p>
-        <a className={styles.backToTop} href="#home">BACK TO TOP ↑</a>
-        <span className={styles.footerYear}>© 2026</span>
-      </footer>
     </div>
   );
 }

@@ -14,7 +14,7 @@ This document tracks content separately from layout so wording can change as new
 | Other personal projects | Hold | Revisit when there is a meaningful portfolio update and verified project information. |
 | Employer / professional work | Hold | Publish only after contribution scope and disclosure permission are confirmed. |
 | Engineering Notes | Keep as an empty section introduction | Add articles only when they are ready to publish. |
-| Contact details | Pending | Do not invent or publish placeholder contact channels. |
+| Contact details | Publish | Email: iman.dodo01@gmail.com; LinkedIn: https://www.linkedin.com/in/iman-sujatmiko/. |
 
 ## 2. Current site copy — provisional
 
@@ -110,3 +110,17 @@ Review this inventory when:
 - A professional project has approved public scope and evidence.
 - The user supplies updated experience details or wants to change the portfolio narrative.
 - The visual design is finalized and copy length needs to be adjusted to the actual layout.
+
+
+## 5. Technical toolkit — provisional
+
+The Experience section may show a compact, category-based overview of technologies used:
+
+| Category | Technologies |
+|---|---|
+| Backend | PHP, Laravel, Node.js |
+| Frontend | JavaScript, TypeScript, React, React Native |
+| Data | MySQL, SQL Server |
+| Integration | REST APIs |
+
+**Publication note:** This is a technology overview, not a proficiency ranking or claim of equal depth across every tool. Keep project-specific stacks attached to their respective projects. Review this list as current practice changes.

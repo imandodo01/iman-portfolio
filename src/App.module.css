@@ -157,3 +157,37 @@
   .contactSection { grid-template-columns: 1fr; gap: 1.4rem; }
   .footerLinks { order: 3; width: 100%; }
 }
+
+
+.toolkit {
+  margin-top: 1.15rem;
+  padding-top: .9rem;
+  border-top: var(--border-subtle);
+}
+.toolkit h3 {
+  margin: 0 0 .7rem;
+  color: var(--color-brass);
+  font: .58rem var(--font-mono);
+  letter-spacing: .11em;
+}
+.toolkit dl { display: grid; gap: .55rem; margin: 0; }
+.toolkit dl > div {
+  display: grid;
+  grid-template-columns: 5.6rem minmax(0, 1fr);
+  gap: .6rem;
+  align-items: baseline;
+}
+.toolkit dt {
+  color: var(--color-muted);
+  font: .58rem var(--font-mono);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.toolkit dd {
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: .72rem;
+  line-height: 1.55;
+}
+.overviewPanel > p:not(.eyebrow) { min-height: 0; }
+.overviewPanel > a { display: inline-block; margin-top: 1rem; }

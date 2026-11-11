@@ -173,6 +173,15 @@ export default function App() {
             <p className={styles.eyebrow}>02 / EXPERIENCE</p>
             <h2>Engineering at work.</h2>
             <p>Backend development across business systems, REST APIs, and web/mobile application workflows.</p>
+            <div className={styles.toolkit}>
+              <h3>TECHNICAL TOOLKIT</h3>
+              <dl>
+                <div><dt>Backend</dt><dd>PHP · Laravel · Node.js</dd></div>
+                <div><dt>Frontend</dt><dd>JavaScript · TypeScript · React · React Native</dd></div>
+                <div><dt>Data</dt><dd>MySQL · SQL Server</dd></div>
+                <div><dt>Integration</dt><dd>REST APIs</dd></div>
+              </dl>
+            </div>
             <a href="#about">How I approach engineering ↗</a>
           </article>
           <article id="notes" className={styles.overviewPanel} data-reveal>

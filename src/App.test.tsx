@@ -35,4 +35,13 @@ describe("Iman portfolio", () => {
     expect(markup).not.toContain('href="#notes"');
     expect(markup).not.toContain("3+ Years");
   });
+
+  it("presents AI Engineering Standard as an engineering resource, not an application", () => {
+    const markup = renderToStaticMarkup(<App />);
+    expect(markup).toContain("AI Engineering Standard");
+    expect(markup).toContain("ENGINEERING METHODOLOGY · DEVELOPER RESOURCE");
+    expect(markup).toContain("framework-agnostic set of guidelines");
+    expect(markup).toContain("https://github.com/imandodo01/ai-engineering-standard");
+    expect(markup).not.toContain("AI Engineering Standard</h3></div><div class");
+  });
 });

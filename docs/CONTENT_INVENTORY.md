@@ -55,7 +55,7 @@ All wording below is a working text kit. It can be rewritten when the user has n
 
 **Status:** Provisional section framing.
 
-#### Qraft — approved current project entry
+#### Qraft — current project entry
 
 - Type: Personal product.
 - Release: v1.0.0, 2026-11-10.

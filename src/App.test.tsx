@@ -7,6 +7,7 @@ describe("Iman portfolio", () => {
     const markup = renderToStaticMarkup(<App />);
     expect(markup.indexOf("I’m Iman.")).toBeLessThan(markup.indexOf("Qraft"));
     expect(markup).toContain("PERSONAL ENGINEERING JOURNAL");
+    expect(markup).toContain("data-reveal");
     expect(markup).toContain('aria-label="Main navigation"');
     expect(markup).toContain('aria-label="Collapse sidebar"');
     expect(markup).toContain('src="/images/steampunk-skull.png"');

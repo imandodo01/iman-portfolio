@@ -94,3 +94,24 @@
   .footer { flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) { .sidebar, .projectImage img { transition: none; } }
+
+
+/* Scroll reveal: enabled only after IntersectionObserver is ready. */
+.mainContent[data-reveal-ready="true"] [data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 520ms ease, transform 520ms cubic-bezier(.2, .65, .3, 1);
+}
+
+.mainContent[data-reveal-ready="true"] [data-reveal].revealVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mainContent[data-reveal-ready="true"] [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

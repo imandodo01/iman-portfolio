@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./App.module.css";
 
 const navigation = [
@@ -31,6 +31,35 @@ export default function App() {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("#home");
+  const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!("IntersectionObserver" in window) || !mainRef.current) return;
+
+    const main = mainRef.current;
+    const revealItems = main.querySelectorAll<HTMLElement>("[data-reveal]");
+    if (revealItems.length === 0) return;
+
+    main.dataset.revealReady = "true";
+
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add(styles.revealVisible);
+          currentObserver.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -36px 0px" },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    return () => {
+      observer.disconnect();
+      delete main.dataset.revealReady;
+    };
+  }, []);
 
   const closeMobile = () => setMobileOpen(false);
 
@@ -78,7 +107,7 @@ export default function App() {
         </button>
       </aside>
 
-      <main id="main" className={styles.mainContent}>
+      <main id="main" ref={mainRef} className={styles.mainContent}>
         <section id="home" className={styles.hero}>
           <div className={styles.heroCopy}>
             <p className={styles.eyebrow}>PERSONAL ENGINEERING JOURNAL</p>
@@ -100,7 +129,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="projects" className={styles.workSection}>
+        <section id="projects" className={styles.workSection} data-reveal>
           <div className={styles.sectionHeading}>
             <div><p className={styles.eyebrow}>01 / SELECTED WORK</p><h2>Built with purpose.</h2></div>
             <span className={styles.sectionMeta}>PERSONAL PROJECT</span>
@@ -123,13 +152,13 @@ export default function App() {
         </section>
 
         <section className={styles.overviewGrid} aria-label="More about Iman's work">
-          <article id="experience" className={styles.overviewPanel}>
+          <article id="experience" className={styles.overviewPanel} data-reveal>
             <p className={styles.eyebrow}>02 / EXPERIENCE</p>
             <h2>Engineering at work.</h2>
             <p>Backend development across business systems, REST APIs, and web/mobile application workflows.</p>
             <a href="#about">How I approach engineering ↗</a>
           </article>
-          <article id="notes" className={styles.overviewPanel}>
+          <article id="notes" className={styles.overviewPanel} data-reveal>
             <p className={styles.eyebrow}>03 / ENGINEERING NOTES</p>
             <h2>Notes from the workbench.</h2>
             <p>Technical lessons and implementation notes will be added when they are ready to share.</p>
@@ -137,7 +166,7 @@ export default function App() {
           </article>
         </section>
 
-        <section id="about" className={styles.aboutSection}>
+        <section id="about" className={styles.aboutSection} data-reveal>
           <p className={styles.eyebrow}>04 / ABOUT</p>
           <p className={styles.aboutStatement}>Curiosity helps find the problem. <em>Clarity helps build the solution.</em></p>
           <p className={styles.aboutCopy}>I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.</p>

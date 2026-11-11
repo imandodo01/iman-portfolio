@@ -38,6 +38,7 @@ See [dependency notes](docs/DEPENDENCY_NOTES.md) for the rationale and maintenan
 ## Project documentation
 
 - [Project specification](docs/PROJECT_SPEC.md)
+- [Portfolio content inventory](docs/CONTENT_INVENTORY.md)
 - [AI Engineering Standard](https://github.com/imandodo01/ai-engineering-standard)
 
 ## Scope discipline

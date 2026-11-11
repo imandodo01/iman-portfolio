@@ -1,6 +1,6 @@
 # Portfolio Content Inventory
 
-**Status:** Working draft — copy is intentionally editable.  
+**Status:** Content refinement — copy is intentionally editable.  
 **Last reviewed:** 2026-11-11  
 **Publication rule:** Only Qraft is currently selected for the public Projects section. Other projects remain out of the public page until their portfolio-ready information is reviewed and approved.
 
@@ -120,3 +120,14 @@ The Experience section may show a compact, category-based overview of technologi
 | Integration | REST APIs |
 
 **Publication note:** This is a technology overview, not a proficiency ranking or claim of equal depth across every tool. Keep project-specific stacks attached to their respective projects. Review this list as current practice changes.
+
+
+## 6. Content refinement backlog
+
+- Refine and approve the About narrative.
+- Replace provisional Experience copy with verified role, date, responsibility, and contribution details where publishable.
+- Review the Qraft project description and supporting media against the released product.
+- Complete an editorial pass for consistency, clarity, and fit with the implemented layout.
+- Keep Engineering Notes hidden until there is publishable material.
+
+The development foundation and local verification are complete. This backlog is editorial; it does not imply additional feature development is required.

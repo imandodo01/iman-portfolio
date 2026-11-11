@@ -41,18 +41,7 @@ export default function App() {
           </div>
 
           <div className={styles.heroAside} aria-hidden="true">
-            <div className={styles.blueprint}>
-              <div className={styles.blueprintCircle}>
-                <div className={styles.blueprintInner}>
-                  <span className={styles.blueprintCross}>+</span>
-                  <img className={styles.blueprintEmblem} src="/image/steampunk-skull.png" alt="" />
-                </div>
-              </div>
-              <span className={styles.axisLabel}>FIG. 01 / PERSONAL INDEX</span>
-              <span className={styles.axisTop}>N 01°</span>
-              <span className={styles.axisBottom}>E 07°</span>
-            </div>
-            <p className={styles.asideCaption}>A working record of<br />ideas, systems &amp; craft.</p>
+            <img className={styles.heroWatermark} src="/images/steampunk-skull.png" alt="" />
           </div>
           <div className={styles.heroFoot}>
             <span>PERSONAL ENGINEERING JOURNAL</span>
@@ -106,10 +95,13 @@ export default function App() {
             <p className={styles.eyebrow}>A few things made with purpose</p>
             <h2 id="projects-title">Small ideas.<br /><em>Useful outcomes.</em></h2>
             <article className={styles.projectCard}>
-              <div className={styles.projectVisual} aria-hidden="true">
-                <span className={styles.projectVisualLabel}>PERSONAL TOOL / 001</span>
-                <div className={styles.qrMark}><span /><span /><span /><i /></div>
-                <span className={styles.projectVisualFoot}>QRAFT — QR / VCARD</span>
+              <div className={styles.projectVisual}>
+                <img
+                  className={styles.projectScreenshot}
+                  src="/images/portofolio-qraft.png"
+                  alt="Qraft application interface showing its QR code and vCard tools"
+                  loading="lazy"
+                />
               </div>
               <div className={styles.projectDetails}>
                 <div className={styles.projectMeta}>

@@ -168,7 +168,7 @@ export default function App() {
           </article>
         </section>
 
-        <div className={styles.overviewGrid} aria-label="More about Iman's work">
+        <div className={styles.overviewGrid}>
           <article id="experience" className={styles.overviewPanel} data-reveal>
             <p className={styles.eyebrow}>02 / EXPERIENCE</p>
             <h2>Engineering at work.</h2>

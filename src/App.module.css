@@ -177,3 +177,149 @@
   .footer p { grid-column: 1 / -1; grid-row: 2; margin: 0; }
   .backToTop { grid-column: 2; grid-row: 1; }
 }
+
+/* Visual refinement: strengthen section rhythm, contrast, and project emphasis. */
+.headerMeta,
+.heroFoot,
+.rowNumber,
+.footer p {
+  color: var(--color-muted);
+}
+
+.heroAside {
+  padding: 1.25rem;
+}
+
+.blueprint {
+  border-color: rgb(176 141 87 / 34%);
+  background-color: rgb(36 39 37 / 38%);
+  background-image:
+    radial-gradient(circle at 50% 48%, rgb(176 141 87 / 12%), transparent 58%),
+    linear-gradient(rgb(234 228 216 / 5%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(234 228 216 / 5%) 1px, transparent 1px);
+  box-shadow: 0 0 5rem rgb(0 0 0 / 18%), inset 0 0 3rem rgb(176 141 87 / 5%);
+}
+
+.blueprintCircle {
+  background: radial-gradient(circle, rgb(176 141 87 / 9%), transparent 72%);
+  box-shadow: 0 0 2.5rem rgb(176 141 87 / 8%);
+}
+
+.section {
+  position: relative;
+  isolation: isolate;
+  margin-inline: clamp(-2.5rem, -3vw, -1rem);
+  padding-inline: clamp(1rem, 3vw, 2.5rem);
+}
+
+.section::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+}
+
+#about::before,
+#projects::before {
+  opacity: 1;
+  background: linear-gradient(112deg, rgb(36 39 37 / 92%), rgb(36 39 37 / 34%) 72%, transparent);
+}
+
+#experience::before,
+#notes::before {
+  opacity: 1;
+  background: linear-gradient(112deg, rgb(152 107 80 / 10%), rgb(36 39 37 / 18%) 58%, transparent);
+}
+
+.sectionIndex {
+  color: var(--color-brass);
+}
+
+.experienceRow {
+  padding: 1.8rem 1.5rem;
+  border-color: rgb(234 228 216 / 18%);
+  background: linear-gradient(100deg, rgb(23 24 23 / 58%), rgb(36 39 37 / 28%));
+}
+
+.experienceRow h3 {
+  color: var(--color-ivory);
+}
+
+.projectCard {
+  padding: 2rem;
+  border: 1px solid rgb(176 141 87 / 24%);
+  background: linear-gradient(115deg, rgb(36 39 37 / 92%), rgb(23 24 23 / 72%));
+  box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 14%);
+}
+
+.projectVisual {
+  min-height: 21rem;
+  border-color: rgb(176 141 87 / 42%);
+  background-color: #202320;
+  background-image:
+    radial-gradient(circle at 50% 48%, rgb(176 141 87 / 17%), transparent 48%),
+    linear-gradient(rgb(234 228 216 / 6%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(234 228 216 / 6%) 1px, transparent 1px);
+  background-size: auto, 1.25rem 1.25rem, 1.25rem 1.25rem;
+}
+
+.qrMark span {
+  border-color: var(--color-paper);
+}
+
+.qrMark i {
+  border-color: var(--color-brass);
+}
+
+.projectDetails h3 {
+  color: var(--color-ivory);
+}
+
+.tags span {
+  border-color: rgb(234 228 216 / 20%);
+  background: rgb(23 24 23 / 42%);
+}
+
+.textLink {
+  color: var(--color-paper);
+  text-underline-offset: 0.25em;
+}
+
+.primaryLink {
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.primaryLink:hover {
+  background: var(--color-paper);
+  transform: translateY(-2px);
+}
+
+.navigation a:focus-visible,
+.primaryLink:focus-visible,
+.secondaryLink:focus-visible,
+.textLink:focus-visible,
+.backToTop:focus-visible {
+  outline: 2px solid var(--color-paper);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .section {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+
+  .projectCard {
+    padding: 1rem;
+  }
+
+  .projectVisual {
+    min-height: 17rem;
+  }
+
+  .experienceRow {
+    padding-inline: 1rem;
+  }
+}

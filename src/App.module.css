@@ -649,3 +649,17 @@
     opacity: 0.1;
   }
 }
+
+
+.projectLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .projectLinks {
+    gap: 1rem;
+  }
+}

@@ -332,3 +332,213 @@
     padding-inline: 1rem;
   }
 }
+
+
+/* Responsive refinement: preserve the editorial layout while reducing mobile scale. */
+@media (max-width: 600px) {
+  .hero {
+    gap: 0.75rem;
+    padding-block: 3.5rem 4.25rem;
+  }
+
+  .hero h1 {
+    margin-block: 1.5rem 1.1rem;
+    font-size: clamp(2.75rem, 10.8vw, 3.75rem);
+    line-height: 1;
+    letter-spacing: -0.07em;
+  }
+
+  .heroIntro {
+    max-width: 30rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .heroActions {
+    gap: 1rem;
+    margin-top: 1.65rem;
+  }
+
+  .primaryLink {
+    padding: 0.85rem 1rem;
+    font-size: 0.76rem;
+  }
+
+  .secondaryLink {
+    font-size: 0.76rem;
+  }
+
+  .heroAside {
+    min-height: auto;
+    gap: 0.25rem;
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .blueprint {
+    width: min(72%, 16rem);
+  }
+
+  .blueprintEmblem {
+    width: 124%;
+  }
+
+  .asideCaption {
+    position: static;
+    justify-self: end;
+    width: min(100%, 16rem);
+    margin: -0.1rem 0 0;
+    font-size: 0.78rem;
+    text-align: left;
+  }
+
+  .heroFoot {
+    bottom: 0.85rem;
+    font-size: 0.48rem;
+  }
+
+  .section {
+    padding-block: 3.75rem;
+  }
+
+  .section h2 {
+    margin-block: 1.15rem 1.75rem;
+    font-size: clamp(2.15rem, 8.8vw, 3rem);
+    line-height: 1.02;
+  }
+
+  .lead {
+    font-size: 1.08rem;
+    line-height: 1.55;
+  }
+
+  .bodyCopy {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .experienceRow {
+    gap: 0.85rem;
+    padding-block: 1.25rem;
+  }
+
+  .experienceRow h3 {
+    margin-top: 0.55rem;
+    font-size: 1.2rem;
+  }
+
+  .projectCard {
+    gap: 1.25rem;
+    padding: 0.85rem;
+  }
+
+  .projectVisual {
+    min-height: 13.5rem;
+  }
+
+  .qrMark {
+    width: 6.5rem;
+    height: 6.5rem;
+    gap: 0.4rem;
+  }
+
+  .qrMark span {
+    border-width: 0.65rem;
+  }
+
+  .qrMark i {
+    width: 2rem;
+    height: 2rem;
+    border-width: 0.55rem;
+  }
+
+  .projectDetails h3 {
+    margin-block: 0.9rem;
+    font-size: 1.8rem;
+  }
+
+  .tags {
+    margin-block: 1.1rem;
+  }
+
+  #notes .lead {
+    max-width: 32rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .siteShell {
+    width: min(100% - 1.5rem, 76rem);
+  }
+
+  .header {
+    gap: 0.65rem;
+  }
+
+  .wordmark {
+    gap: 0.45rem;
+    font-size: 0.72rem;
+  }
+
+  .wordmarkMark {
+    width: 1.8rem;
+  }
+
+  .navigation {
+    gap: 0.55rem;
+  }
+
+  .navigation a {
+    font-size: 0.49rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 10.5vw, 2.85rem);
+  }
+
+  .heroActions {
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .primaryLink {
+    gap: 0.5rem;
+    padding: 0.8rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .secondaryLink {
+    gap: 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .blueprint {
+    width: min(76%, 15rem);
+  }
+
+  .heroFoot span:first-child {
+    max-width: 6.5rem;
+  }
+
+  .section {
+    padding-block: 3.25rem;
+  }
+
+  .section h2 {
+    font-size: clamp(2rem, 8.5vw, 2.5rem);
+  }
+
+  .projectMeta {
+    font-size: 0.52rem;
+  }
+
+  .footer {
+    gap: 0.75rem;
+  }
+}

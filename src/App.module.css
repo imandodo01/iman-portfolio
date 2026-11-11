@@ -8,7 +8,7 @@
 .brandMark { display: grid; flex: 0 0 2.5rem; aspect-ratio: 1; place-items: center; border: 1px solid var(--color-brass); color: var(--color-brass); font: 1rem var(--font-mono); }
 .brandText { display: grid; gap: .3rem; font: 700 .9rem var(--font-heading); letter-spacing: .14em; white-space: nowrap; }
 .brandText small { color: var(--color-muted); font: .53rem var(--font-mono); letter-spacing: .1em; }
-.sidebarCollapsed .brandText, .sidebarCollapsed .nav a span, .sidebarCollapsed .sidebarFoot, .sidebarCollapsed .collapseButton span { display: none; }
+.sidebarCollapsed .brandText, .sidebarCollapsed .navigation a span, .sidebarCollapsed .sidebarFoot, .sidebarCollapsed .collapseButton span { display: none; }
 .navigation { display: grid; gap: .45rem; margin-top: 3.2rem; }
 .navigation a { display: flex; align-items: center; gap: .9rem; min-height: 3.15rem; padding: .7rem .8rem; color: var(--color-muted); text-decoration: none; border-left: 2px solid transparent; transition: color 160ms ease, background 160ms ease; }
 .navigation a:hover { color: var(--color-ivory); background: rgb(176 141 87 / 8%); }
@@ -20,8 +20,8 @@
 .collapseButton:hover { color: var(--color-brass); }
 .sidebarCollapsed .collapseButton { justify-content: center; }
 .sidebarCollapsed .collapseButton svg { transform: rotate(180deg); }
-.mainContent { width: min(100% - 4rem, 94rem); margin-left: 15rem; padding: 0 clamp(1.5rem, 4vw, 4.5rem); transition: margin-left 180ms ease; }
-.appShell:has(.sidebarCollapsed) .mainContent { margin-left: 5rem; }
+.mainContent { width: calc(100% - 15rem); max-width: 94rem; margin-left: 15rem; padding: 0 clamp(1.5rem, 4vw, 4.5rem); transition: margin-left 180ms ease; }
+.appShell:has(.sidebarCollapsed) .mainContent { width: calc(100% - 5rem); max-width: 100rem; margin-left: 5rem; }
 .mobileMenu, .scrim { display: none; }
 .hero { position: relative; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(14rem, .8fr); align-items: center; gap: 2rem; min-height: 29rem; padding-block: 4rem 2rem; border-bottom: var(--border-subtle); overflow: hidden; }
 .heroCopy { position: relative; z-index: 2; }
@@ -77,7 +77,7 @@
   .sidebarCollapsed .collapseButton { justify-content: flex-start; }
   .sidebarCollapsed .collapseButton svg { transform: none; }
   .navigation { margin-top: 2rem; }
-  .mainContent, .appShell:has(.sidebarCollapsed) .mainContent { width: 100%; margin-left: 0; padding-inline: 1.1rem; }
+  .mainContent, .appShell:has(.sidebarCollapsed) .mainContent { width: 100%; max-width: none; margin-left: 0; padding-inline: 1.1rem; }
   .mobileMenu { position: fixed; z-index: 25; top: .8rem; right: .8rem; display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid rgb(176 141 87 / 35%); background: var(--color-charcoal); color: var(--color-ivory); }
   .scrim { position: fixed; z-index: 15; inset: 0; display: block; border: 0; background: rgb(0 0 0 / 58%); }
   .hero { grid-template-columns: 1fr; gap: .5rem; min-height: 0; padding-block: 5.5rem 1.5rem; }

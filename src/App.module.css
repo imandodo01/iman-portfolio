@@ -105,7 +105,7 @@
 .blueprint::after { inset: 19%; border-style: dashed; }
 .blueprintCircle { display: grid; width: 52%; aspect-ratio: 1; place-items: center; border: 1px solid var(--color-brass); border-radius: 50%; }
 .blueprintInner { position: relative; display: grid; width: 76%; aspect-ratio: 1; place-items: center; border: 1px solid rgb(176 141 87 / 35%); border-radius: 50%; }
-.blueprintInitial { color: var(--color-brass); font-family: var(--font-heading); font-size: clamp(4rem, 8vw, 7rem); font-weight: 300; }
+.blueprintEmblem {\n  display: block;\n  width: 132%;\n  max-width: none;\n  height: auto;\n  opacity: 0.9;\n  filter: invert(1) sepia(18%) saturate(550%) hue-rotate(355deg) brightness(0.9);\n  mix-blend-mode: screen;\n}\n
 .blueprintCross { position: absolute; top: 0; left: 50%; color: var(--color-muted); font-family: var(--font-mono); transform: translate(-50%, -50%); }
 .axisLabel, .axisTop, .axisBottom { position: absolute; color: var(--color-muted); font-family: var(--font-mono); font-size: 0.55rem; letter-spacing: 0.12em; }
 .axisLabel { bottom: 8%; }

@@ -110,14 +110,20 @@ export default function App() {
                 </div>
                 <h3>Qraft</h3>
                 <p className={styles.bodyCopy}>
-                  A lightweight web tool for creating QR codes and vCard contact
-                  files. Built as an independent product, with a focus on a
-                  straightforward workflow and practical output.
+                  A local-first digital toolbox with nine browser-based tools for
+                  QR codes, contact cards, developer utilities, and everyday text
+                  tasks. Core tools process user content locally, without an
+                  account or application backend.
                 </p>
-                <div className={styles.tags}><span>React</span><span>TypeScript</span><span>Vite</span></div>
-                <a className={styles.textLink} href="https://github.com/imandodo01/Qraft" target="_blank" rel="noreferrer">
-                  View repository <span aria-hidden="true">↗</span>
-                </a>
+                <div className={styles.tags}><span>TypeScript</span><span>HTML &amp; CSS</span><span>Vite</span></div>
+                <div className={styles.projectLinks}>
+                  <a className={styles.textLink} href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer">
+                    Visit Qraft <span aria-hidden="true">↗</span>
+                  </a>
+                  <a className={styles.textLink} href="https://github.com/imandodo01/Qraft" target="_blank" rel="noreferrer">
+                    View repository <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </div>
             </article>
           </div>

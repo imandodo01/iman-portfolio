@@ -6,7 +6,7 @@
 
 ## 1. Purpose
 
-This site represents Iman as an individual software engineer. It is independent from the Clementine Work brand, though both may share a visual language and link to each other where relevant. It must distinguish personal projects, professional experience, and contributions made within an employer's systems.
+This site represents Iman as an individual software engineer. It is independent from the Clementine Work brand, though both may share a visual language and link to each other where relevant. It must distinguish personal projects, engineering resources, professional experience, and contributions made within an employer's systems.
 
 ## 2. Product goals
 
@@ -28,7 +28,7 @@ The current public page is a single-page portfolio with these sections:
 Name, concise professional positioning, introduction, and selected work.
 
 ### Projects
-Personal projects and approved professional case studies, with role and contribution clearly stated. Qraft is currently the only selected public project.
+Personal projects, engineering methodologies/resources, and approved professional case studies, with type, role, and contribution clearly stated. Qraft and AI Engineering Standard are currently selected public entries.
 
 ### Experience
 Employment and responsibilities, described accurately and without disclosing confidential information. Do not invent missing roles, dates, responsibilities, or metrics.
@@ -76,10 +76,11 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 
 ## 8. Content and publication rules
 
-- Clearly distinguish personal ownership from professional/employer work.
+- Clearly distinguish personal ownership, engineering resources, professional experience, and employer contributions.
 - Describe individual contributions precisely; do not claim ownership of an entire company system.
 - Do not publish proprietary source code, credentials, internal URLs, customer data, screenshots, or confidential architecture.
 - Use measurable experience claims only when they can be substantiated.
+- Respect each project's license and third-party material terms when linking or describing it.
 
 ## 9. Quality attributes
 
@@ -96,10 +97,12 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 - [x] Development and production build commands are documented.
 - [x] Responsive page shell and navigation exist.
 - [x] Current public sections are implemented: Home, Projects, Experience, About, and Contact.
+- [x] Qraft is presented as a personal product.
+- [x] AI Engineering Standard is presented as an engineering methodology / developer resource, not an application.
 - [x] Engineering Notes remain deferred until publishable content exists.
 - [x] Logo/artwork is integrated without destructive modification.
 - [x] Design tokens cover colors, typography, spacing, and borders.
-- [x] Local lint, typecheck, tests, and production build pass (user-confirmed).
+- [x] Local lint, typecheck, tests, and production build pass (user-confirmed for the previous implementation baseline; re-run after these content changes).
 - [ ] Keyboard navigation, contrast, and reduced-motion behavior receive final review.
 - [x] No secrets, private data, or unapproved employer materials are intentionally included in the approved content inventory.
 - [ ] Final domain, canonical URL, social preview image, and deployment configuration are completed and verified before release.

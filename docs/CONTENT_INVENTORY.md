@@ -2,7 +2,7 @@
 
 **Status:** Content refinement — copy is intentionally editable.  
 **Last reviewed:** 2026-11-11  
-**Publication rule:** Only Qraft is currently selected for the public Projects section. Other projects remain out of the public page until their portfolio-ready information is reviewed and approved.
+**Publication rule:** Qraft and AI Engineering Standard are currently selected for the public Projects section. Other projects remain out of the public page until their portfolio-ready information is reviewed and approved.
 
 This document tracks content separately from layout so wording can change as new project information becomes available. Text marked **Provisional** is not final copy and may be revised without treating the current wording as a permanent claim.
 
@@ -11,6 +11,7 @@ This document tracks content separately from layout so wording can change as new
 | Content | Current decision | Notes |
 |---|---|---|
 | Qraft | Publish | Personal product; v1.0.0 released 2026-11-10. |
+| AI Engineering Standard | Publish | Personal engineering methodology / developer resource; public repository, licensed CC BY 4.0. Not an application or framework. |
 | Other personal projects | Hold | Revisit when there is a meaningful portfolio update and verified project information. |
 | Employer / professional work | Hold | Publish only after contribution scope and disclosure permission are confirmed. |
 | Engineering Notes | Hidden / deferred | Not shown in the current navigation or page. Reintroduce only when there is at least one publishable note or a clear content plan. |
@@ -71,11 +72,22 @@ All wording below is a working text kit. It can be rewritten when the user has n
   8. Text Counter.
   9. Case Converter.
 - Technology: HTML5, CSS3, TypeScript, Vite, Vitest, ESLint. Qraft does not use a frontend UI framework.
+- License: MIT.
 - Live product: https://qraft-9y9.pages.dev/
 - Source repository: https://github.com/imandodo01/Qraft
 - Release: https://github.com/imandodo01/Qraft/releases/tag/v1.0.0
 
-**Publication note:** Keep Qraft as the only project card for now. Revisit this entry if a new release materially changes its features or status. Do not claim that future backlog ideas are shipped.
+**Publication note:** Keep Qraft as the personal product entry. Revisit this entry if a new release materially changes its features or status. Do not claim that future backlog ideas are shipped.
+
+#### AI Engineering Standard — current engineering resource entry
+
+- Type: Engineering methodology / developer resource.
+- Description basis: A practical, framework-agnostic set of guidelines for AI-assisted software engineering. It defines a disciplined workflow for understanding requirements, inspecting projects, planning changes, implementing solutions, and verifying outcomes.
+- Coverage: Engineering principles, development workflow, Git policy, testing and verification, security, code quality, and initial ChatGPT / OpenAI Codex integration guidance.
+- License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+- Source repository: https://github.com/imandodo01/ai-engineering-standard
+
+**Publication note:** Present this as an engineering methodology and reusable developer resource, not as a software application, framework, or commercial product. The license permits sharing and adaptation with appropriate attribution and indication of changes. Third-party materials remain subject to their own terms.
 
 ### Engineering Notes — deferred
 
@@ -102,11 +114,11 @@ The section is intentionally hidden from the current public page and navigation.
 
 Review this inventory when:
 - Qraft receives a meaningful new release.
+- AI Engineering Standard receives a meaningful revision or new integration.
 - Another personal project reaches a presentable milestone.
 - A professional project has approved public scope and evidence.
 - The user supplies updated experience details or wants to change the portfolio narrative.
 - The visual design is finalized and copy length needs to be adjusted to the actual layout.
-
 
 ## 5. Technical toolkit — provisional
 
@@ -120,7 +132,6 @@ The Experience section may show a compact, category-based overview of technologi
 | Integration | REST APIs |
 
 **Publication note:** This is a technology overview, not a proficiency ranking or claim of equal depth across every tool. Keep project-specific stacks attached to their respective projects. Review this list as current practice changes.
-
 
 ## 6. Content refinement backlog
 

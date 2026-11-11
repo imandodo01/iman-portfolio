@@ -6,6 +6,8 @@ describe("Iman portfolio", () => {
   it("renders the primary identity and portfolio navigation", () => {
     const markup = renderToStaticMarkup(<App />);
     expect(markup).toContain("Building software");
+    expect(markup).toContain('src="/image/steampunk-skull.png"');
+    expect(markup).toContain('alt=""');
     expect(markup).toContain('aria-label="Main navigation"');
     expect(markup).toContain('href="#experience"');
   });

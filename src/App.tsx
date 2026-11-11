@@ -186,9 +186,24 @@ export default function App() {
         </div>
 
         <section id="about" className={styles.aboutSection} data-reveal>
-          <p className={styles.eyebrow}>03 / ABOUT</p>
-          <p className={styles.aboutStatement}>Curiosity helps find the problem. <em>Clarity helps build the solution.</em></p>
-          <p className={styles.aboutCopy}>I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.</p>
+          <header className={styles.aboutHeader}>
+            <p className={styles.eyebrow}>03 / ABOUT</p>
+            <h2 className={styles.aboutStatement}>Build practical things. Keep them simple. <em>Make everyday work better.</em></h2>
+          </header>
+          <div className={styles.aboutDetails}>
+            <article className={styles.aboutItem}>
+              <p className={styles.eyebrow}>01 / HOW I THINK</p>
+              <p>I approach software engineering with a focus on simplicity, maintainability, and practical solutions. I prefer breaking complex problems into smaller, understandable pieces, making solutions easier to work with and maintain over time.</p>
+            </article>
+            <article className={styles.aboutItem}>
+              <p className={styles.eyebrow}>02 / WHAT I BUILD</p>
+              <p>My work spans backend systems, REST APIs, web and mobile applications, as well as debugging and maintaining existing software.</p>
+            </article>
+            <article className={styles.aboutItem}>
+              <p className={styles.eyebrow}>03 / WHAT DRIVES ME</p>
+              <p>I enjoy building software that removes everyday friction, improves quality of life, and makes repetitive or inconvenient tasks easier to handle. Beyond professional work, I build independent tools and hope to explore game development in the future.</p>
+            </article>
+          </div>
         </section>
 
         <section id="contact" className={styles.contactSection} data-reveal>

@@ -12,6 +12,11 @@ describe("Iman portfolio", () => {
     expect(markup).toContain("https://www.linkedin.com/in/iman-sujatmiko/");
     expect(markup).toContain('id="contact"');
     expect(markup).toContain("TECHNICAL TOOLKIT");
+    expect(markup).toContain("HOW I THINK");
+    expect(markup).toContain("WHAT I BUILD");
+    expect(markup).toContain("WHAT DRIVES ME");
+    expect(markup).toContain("removes everyday friction");
+    expect(markup).toContain("game development");
     expect(markup).toContain("PHP · Laravel · Node.js");
     expect(markup).toContain("React Native");
     expect(markup).toContain("MySQL · SQL Server");

@@ -32,12 +32,12 @@ All wording below is a working text kit. It can be rewritten when the user has n
 
 ### About
 
-- Eyebrow: The person behind the work
-- Heading: Curiosity is useful. Clarity is essential.
-- Lead: I enjoy understanding how things work, finding the real problem, and building software that makes everyday work more reliable.
-- Supporting copy: My work has centered on backend development, APIs, business applications, and the connections between systems. I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.
+- Heading: Build practical things. Keep them simple. Make everyday work better.
+- How I Think: Focus on simplicity, maintainability, practical solutions, and breaking complex problems into understandable pieces.
+- What I Build: Backend systems, REST APIs, web and mobile applications, debugging, and maintenance.
+- What Drives Me: Building software that removes everyday friction and improves quality of life; independent tools; a future interest in game development.
 
-**Status:** Provisional. The wording describes a broad engineering approach; refine with concrete examples and the user's preferred voice later.
+**Status:** Provisional copy based on the user's own descriptions. Keep editable as experience and direction evolve. No claim of professional game development experience is made.
 
 ### Experience
 

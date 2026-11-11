@@ -13,7 +13,7 @@ This document tracks content separately from layout so wording can change as new
 | Qraft | Publish | Personal product; v1.0.0 released 2026-11-10. |
 | Other personal projects | Hold | Revisit when there is a meaningful portfolio update and verified project information. |
 | Employer / professional work | Hold | Publish only after contribution scope and disclosure permission are confirmed. |
-| Engineering Notes | Keep as an empty section introduction | Add articles only when they are ready to publish. |
+| Engineering Notes | Hidden / deferred | Not shown in the current navigation or page. Reintroduce only when there is at least one publishable note or a clear content plan. |
 | Contact details | Publish | Email: iman.dodo01@gmail.com; LinkedIn: https://www.linkedin.com/in/iman-sujatmiko/. |
 
 ## 2. Current site copy — provisional
@@ -77,13 +77,9 @@ All wording below is a working text kit. It can be rewritten when the user has n
 
 **Publication note:** Keep Qraft as the only project card for now. Revisit this entry if a new release materially changes its features or status. Do not claim that future backlog ideas are shipped.
 
-### Engineering Notes
+### Engineering Notes — deferred
 
-- Eyebrow: Thinking out loud, carefully
-- Heading: Notes from the workbench.
-- Introduction: A place for technical lessons, implementation notes, and ideas worth revisiting. Published writing will appear here as it is ready.
-
-**Status:** Provisional. No article cards should be fabricated; add links only when actual notes are published.
+The section is intentionally hidden from the current public page and navigation. Preserve this concept for a future update when at least one useful, publishable technical note exists. Do not show an empty placeholder section.
 
 ### Footer
 

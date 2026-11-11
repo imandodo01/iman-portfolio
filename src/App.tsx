@@ -6,7 +6,6 @@ const navigation = [
   { label: "Projects", href: "#projects", icon: "projects" },
   { label: "Experience", href: "#experience", icon: "experience" },
   { label: "About", href: "#about", icon: "about" },
-  { label: "Notes", href: "#notes", icon: "notes" },
   { label: "Contact", href: "#contact", icon: "contact" },
 ];
 
@@ -184,23 +183,17 @@ export default function App() {
             </div>
             <a href="#about">How I approach engineering ↗</a>
           </article>
-          <article id="notes" className={styles.overviewPanel} data-reveal>
-            <p className={styles.eyebrow}>03 / ENGINEERING NOTES</p>
-            <h2>Notes from the workbench.</h2>
-            <p>Technical lessons and implementation notes will be added when they are ready to share.</p>
-            <span className={styles.quietMeta}>NO ARTICLES PUBLISHED YET</span>
-          </article>
         </div>
 
         <section id="about" className={styles.aboutSection} data-reveal>
-          <p className={styles.eyebrow}>04 / ABOUT</p>
+          <p className={styles.eyebrow}>03 / ABOUT</p>
           <p className={styles.aboutStatement}>Curiosity helps find the problem. <em>Clarity helps build the solution.</em></p>
           <p className={styles.aboutCopy}>I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.</p>
         </section>
 
         <section id="contact" className={styles.contactSection} data-reveal>
           <div>
-            <p className={styles.eyebrow}>05 / CONTACT</p>
+            <p className={styles.eyebrow}>04 / CONTACT</p>
             <h2>Have something worth building?</h2>
             <p className={styles.contactCopy}>For conversations about software, engineering, or potential opportunities, feel free to reach out.</p>
           </div>

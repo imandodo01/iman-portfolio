@@ -26,7 +26,8 @@ describe("Iman portfolio", () => {
     expect(markup).toContain("https://qraft-9y9.pages.dev/");
     expect(markup).toContain("https://github.com/imandodo01/Qraft");
     expect(markup).toContain('src="/images/portofolio-qraft.png"');
-    expect(markup).toContain("NO ARTICLES PUBLISHED YET");
+    expect(markup).not.toContain("NO ARTICLES PUBLISHED YET");
+    expect(markup).not.toContain('href="#notes"');
     expect(markup).not.toContain("3+ Years");
   });
 });

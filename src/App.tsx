@@ -7,6 +7,7 @@ const navigation = [
   { label: "Experience", href: "#experience", icon: "experience" },
   { label: "About", href: "#about", icon: "about" },
   { label: "Notes", href: "#notes", icon: "notes" },
+  { label: "Contact", href: "#contact", icon: "contact" },
 ];
 
 function Icon({ name }: { name: string }) {
@@ -16,6 +17,7 @@ function Icon({ name }: { name: string }) {
     experience: "M3 7h18M5 7V4h14v3M5 7v13h14V7M9 11h6M9 15h6",
     about: "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21a8 8 0 0 1 16 0",
     notes: "M5 3h11l4 4v14H5zM16 3v5h4M8 12h8M8 16h8",
+    contact: "M3 5h18v14H3zM3 6l9 7 9-7",
     collapse: "M15 18l-6-6 6-6",
     menu: "M3 6h18M3 12h18M3 18h18",
     close: "M6 6l12 12M18 6 6 18",
@@ -59,6 +61,21 @@ export default function App() {
       observer.disconnect();
       delete main.dataset.revealReady;
     };
+  }, []);
+
+  useEffect(() => {
+    if (!("IntersectionObserver" in window)) return;
+    const sections = navigation
+      .map((item) => document.querySelector<HTMLElement>(item.href))
+      .filter((section): section is HTMLElement => section !== null);
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((left, right) => right.intersectionRatio - left.intersectionRatio)[0];
+      if (visible) setActive(`#${visible.target.id}`);
+    }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.15, 0.4, 0.7] });
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
   }, []);
 
   const closeMobile = () => setMobileOpen(false);
@@ -172,9 +189,25 @@ export default function App() {
           <p className={styles.aboutCopy}>I value maintainable solutions, clear trade-offs, and steady improvement over unnecessary complexity.</p>
         </section>
 
+        <section id="contact" className={styles.contactSection} data-reveal>
+          <div>
+            <p className={styles.eyebrow}>05 / CONTACT</p>
+            <h2>Have something worth building?</h2>
+            <p className={styles.contactCopy}>For conversations about software, engineering, or potential opportunities, feel free to reach out.</p>
+          </div>
+          <div className={styles.contactLinks}>
+            <a href="mailto:iman.dodo01@gmail.com">iman.dodo01@gmail.com <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/iman-sujatmiko/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+
         <footer className={styles.footer}>
           <a className={styles.footerBrand} href="#home">IMAN<span> / SOFTWARE ENGINEERING</span></a>
-          <a href="#home">BACK TO TOP ↑</a>
+          <div className={styles.footerLinks}>
+            <a href="mailto:iman.dodo01@gmail.com">EMAIL</a>
+            <a href="https://www.linkedin.com/in/iman-sujatmiko/" target="_blank" rel="noreferrer">LINKEDIN ↗</a>
+            <a href="#home">BACK TO TOP ↑</a>
+          </div>
           <span>© 2026</span>
         </footer>
       </main>

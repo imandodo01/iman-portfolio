@@ -8,6 +8,9 @@ describe("Iman portfolio", () => {
     expect(markup.indexOf("I’m Iman.")).toBeLessThan(markup.indexOf("Qraft"));
     expect(markup).toContain("PERSONAL ENGINEERING JOURNAL");
     expect(markup).toContain("data-reveal");
+    expect(markup).toContain("iman.dodo01@gmail.com");
+    expect(markup).toContain("https://www.linkedin.com/in/iman-sujatmiko/");
+    expect(markup).toContain('id="contact"');
     expect(markup).toContain('aria-label="Main navigation"');
     expect(markup).toContain('aria-label="Collapse sidebar"');
     expect(markup).toContain('src="/images/steampunk-skull.png"');

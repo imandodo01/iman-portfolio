@@ -191,3 +191,94 @@
 }
 .overviewPanel > p:not(.eyebrow) { min-height: 0; }
 .overviewPanel > a { display: inline-block; margin-top: 1rem; }
+
+
+/* Viewport-based editorial sections: viewport height is a composition target,
+   never a fixed content boundary. */
+.hero,
+.workSection,
+.overviewPanel,
+.aboutSection,
+.contactSection {
+  min-height: 100svh;
+  scroll-margin-block: 1.5rem;
+}
+
+.hero {
+  align-content: center;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+.workSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+.overviewGrid {
+  display: contents;
+}
+
+.overviewPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 5rem);
+  border-inline: 0;
+  border-block: var(--border-subtle);
+  background: linear-gradient(110deg, rgb(36 39 37 / 38%), transparent 72%);
+}
+
+.overviewPanel > p:not(.eyebrow) {
+  max-width: 42rem;
+}
+
+.overviewPanel .toolkit {
+  width: min(100%, 42rem);
+  margin-block: 1.5rem;
+}
+
+.overviewPanel > a,
+.overviewPanel > .quietMeta {
+  margin-top: 1.5rem;
+}
+
+.aboutSection {
+  align-content: center;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+.contactSection {
+  align-content: center;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+@media (max-width: 680px) {
+  .hero,
+  .workSection,
+  .overviewPanel,
+  .aboutSection,
+  .contactSection {
+    min-height: 100svh;
+    padding-block: 5rem;
+  }
+
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .overviewPanel {
+    padding-inline: 1.25rem;
+  }
+
+  .overviewPanel .toolkit {
+    margin-block: 1rem;
+  }
+
+  .aboutSection,
+  .contactSection {
+    align-content: center;
+  }
+}

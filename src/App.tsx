@@ -168,7 +168,7 @@ export default function App() {
           </article>
         </section>
 
-        <section className={styles.overviewGrid} aria-label="More about Iman's work">
+        <div className={styles.overviewGrid} aria-label="More about Iman's work">
           <article id="experience" className={styles.overviewPanel} data-reveal>
             <p className={styles.eyebrow}>02 / EXPERIENCE</p>
             <h2>Engineering at work.</h2>
@@ -190,7 +190,7 @@ export default function App() {
             <p>Technical lessons and implementation notes will be added when they are ready to share.</p>
             <span className={styles.quietMeta}>NO ARTICLES PUBLISHED YET</span>
           </article>
-        </section>
+        </div>
 
         <section id="about" className={styles.aboutSection} data-reveal>
           <p className={styles.eyebrow}>04 / ABOUT</p>

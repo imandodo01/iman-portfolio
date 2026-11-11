@@ -148,7 +148,7 @@ export default function App() {
         <section id="projects" className={styles.workSection} data-reveal>
           <div className={styles.sectionHeading}>
             <div><p className={styles.eyebrow}>01 / SELECTED WORK</p><h2>Built with purpose.</h2></div>
-            <span className={styles.sectionMeta}>PERSONAL PROJECT</span>
+            <span className={styles.sectionMeta}>PERSONAL PROJECTS &amp; ENGINEERING RESOURCES</span>
           </div>
           <article className={styles.projectFeature}>
             <a className={styles.projectImage} href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer" aria-label="Visit Qraft">
@@ -162,6 +162,19 @@ export default function App() {
               <div className={styles.projectLinks}>
                 <a href="https://qraft-9y9.pages.dev/" target="_blank" rel="noreferrer">Visit product ↗</a>
                 <a href="https://github.com/imandodo01/Qraft" target="_blank" rel="noreferrer">Repository ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article className={styles.resourceFeature}>
+            <div className={styles.resourceMark} aria-hidden="true">AE / 01</div>
+            <div className={styles.resourceInfo}>
+              <p className={styles.eyebrow}>ENGINEERING METHODOLOGY · DEVELOPER RESOURCE</p>
+              <h3>AI Engineering Standard</h3>
+              <p>A practical, framework-agnostic set of guidelines for AI-assisted software engineering. It defines a disciplined workflow for understanding requirements, inspecting projects, planning changes, implementing solutions, and verifying outcomes.</p>
+              <div className={styles.tags}><span>Engineering Principles</span><span>Development Workflow</span><span>Git &amp; Testing</span><span>Security &amp; Quality</span></div>
+              <div className={styles.projectLinks}>
+                <a href="https://github.com/imandodo01/ai-engineering-standard" target="_blank" rel="noreferrer">Explore the standard ↗</a>
               </div>
             </div>
           </article>

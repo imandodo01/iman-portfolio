@@ -45,7 +45,7 @@ export default function App() {
               <div className={styles.blueprintCircle}>
                 <div className={styles.blueprintInner}>
                   <span className={styles.blueprintCross}>+</span>
-                  <span className={styles.blueprintInitial}>I</span>
+                  <img className={styles.blueprintEmblem} src="/image/steampunk-skull.png" alt="" />
                 </div>
               </div>
               <span className={styles.axisLabel}>FIG. 01 / PERSONAL INDEX</span>

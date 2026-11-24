@@ -1,12 +1,12 @@
 # Project Specification — Iman
 
-**Status:** Draft 0.1  
+**Status:** Active — content refinement and pre-release  
 **Product type:** Static frontend website  
 **Tagline:** Personal Software Engineering Portfolio
 
 ## 1. Purpose
 
-This site represents Iman as an individual software engineer. It is independent from the Clementine Work brand, though both may share a visual language and link to each other where relevant. It must distinguish personal projects, professional experience, and contributions made within an employer's systems.
+This site represents Iman as an individual software engineer. It is independent from the Clementine Work brand, though both may share a visual language and link to each other where relevant. It must distinguish personal projects, engineering resources, professional experience, and contributions made within an employer's systems.
 
 ## 2. Product goals
 
@@ -22,23 +22,25 @@ A personal portfolio presenting Iman's software engineering experience, selected
 
 ## 4. Information architecture
 
+The current public page is a single-page portfolio with these sections:
+
 ### Home
 Name, concise professional positioning, introduction, and selected work.
 
-### About
-Personal engineering approach, interests, and professional story.
+### Projects
+Personal projects, engineering methodologies/resources, and approved professional case studies, with type, role, and contribution clearly stated. Qraft and AI Engineering Standard are currently selected public entries.
 
 ### Experience
-Employment and responsibilities, described accurately and without disclosing confidential information.
+Employment and responsibilities, described accurately and without disclosing confidential information. Do not invent missing roles, dates, responsibilities, or metrics.
 
-### Projects
-Personal projects and approved professional case studies, with role and contribution clearly stated.
-
-### Engineering Notes
-Technical writing, lessons learned, and selected explorations.
+### About
+Personal engineering approach, interests, and professional story. Copy remains editable until explicitly finalized.
 
 ### Contact
-Public professional contact channels, once selected.
+Public professional contact channels selected for publication.
+
+### Engineering Notes — deferred
+Keep hidden from navigation and the page until at least one useful, publishable technical note exists or a clear content plan is approved. Do not render an empty placeholder section.
 
 ## 5. Visual direction
 
@@ -61,7 +63,7 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 - Optimize images; prefer appropriate modern formats and responsive sizing.
 - Avoid adding dependencies without a specific requirement.
 - Deployment target: Cloudflare Pages is the current proposal, pending repository and domain setup.
-- CI proposal: install from lockfile, lint, typecheck, tests, and production build.
+- Local verification is the current quality gate: clean lockfile install, lint, typecheck, tests, and production build. GitHub Actions is not part of the current scope.
 
 ## 7. Non-goals for the initial release
 
@@ -74,10 +76,11 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 
 ## 8. Content and publication rules
 
-- Clearly distinguish personal ownership from professional/employer work.
+- Clearly distinguish personal ownership, engineering resources, professional experience, and employer contributions.
 - Describe individual contributions precisely; do not claim ownership of an entire company system.
 - Do not publish proprietary source code, credentials, internal URLs, customer data, screenshots, or confidential architecture.
 - Use measurable experience claims only when they can be substantiated.
+- Respect each project's license and third-party material terms when linking or describing it.
 
 ## 9. Quality attributes
 
@@ -90,25 +93,28 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 
 ## 10. Initial acceptance criteria
 
-- [ ] Project scaffold installs cleanly from the lockfile.
-- [ ] Development and production build commands are documented.
-- [ ] Responsive page shell and navigation exist.
-- [ ] Initial page sections follow the approved information architecture.
-- [ ] Logo assets are integrated without destructive modification.
-- [ ] Design tokens cover colors, typography, spacing, and borders.
-- [ ] Lint, typecheck, tests, and build run in CI.
-- [ ] No secrets, private data, or unapproved employer materials are present.
-- [ ] Keyboard navigation and reduced-motion behavior are checked.
-- [ ] Deployment configuration is documented and verified before release.
+- [x] Project scaffold installs cleanly from the lockfile.
+- [x] Development and production build commands are documented.
+- [x] Responsive page shell and navigation exist.
+- [x] Current public sections are implemented: Home, Projects, Experience, About, and Contact.
+- [x] Qraft is presented as a personal product.
+- [x] AI Engineering Standard is presented as an engineering methodology / developer resource, not an application.
+- [x] Engineering Notes remain deferred until publishable content exists.
+- [x] Logo/artwork is integrated without destructive modification.
+- [x] Design tokens cover colors, typography, spacing, and borders.
+- [x] Local lint, typecheck, tests, and production build pass (user-confirmed for the previous implementation baseline; re-run after these content changes).
+- [ ] Keyboard navigation, contrast, and reduced-motion behavior receive final review.
+- [x] No secrets, private data, or unapproved employer materials are intentionally included in the approved content inventory.
+- [ ] Final domain, canonical URL, social preview image, and deployment configuration are completed and verified before release.
 
-## 11. Open decisions
+## 11. Remaining decisions and work
 
-- Final domain and public contact channel.
-- Final approved logo variants and asset formats.
+- Final domain and corresponding canonical URL.
+- Final Open Graph/social preview image.
 - Final font hosting strategy (local or provider-hosted).
-- Exact project content, screenshots, and publication permissions.
-- Final deployment configuration and environment variables, if any.
-- Final motion and interaction specification.
+- Editorial refinement and approval of About, Experience, and project copy.
+- Final accessibility, responsive, and performance review.
+- Final deployment configuration and release verification.
 
 ## 12. Engineering governance
 

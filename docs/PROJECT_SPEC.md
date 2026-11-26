@@ -119,3 +119,8 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 ## 12. Engineering governance
 
 Follow the current repository guidance and the user's [AI Engineering Standard](https://github.com/imandodo01/ai-engineering-standard). Before implementation, read its current `AGENTS.md` and relevant policies, then inspect this repository's instructions, structure, and Git state. Keep changes small, verify them, inspect the final diff, and report checks actually performed.
+
+
+## Approved project addition — Retail Brand & Category Report
+
+The Projects section may include the independent Retail Brand & Category Report case study. Use the four approved screenshots under `public/images/retail-report-generator/`. Present the project as a Python/Streamlit workbook reporting application. Do not link its private source repository, publish source workbooks, or imply that workbook-level brand share represents external market share. Keep technical descriptions aligned with the project's README and implemented behavior.

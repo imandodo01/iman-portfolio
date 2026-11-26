@@ -33,6 +33,9 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("#home");
   const mainRef = useRef<HTMLElement>(null);
+  const screenshotGalleryRef = useRef<HTMLDivElement>(null);
+  const [screenshotIndex, setScreenshotIndex] = useState(0);
+  const scrollScreenshot = (direction: number) => screenshotGalleryRef.current?.scrollBy({ left: direction * screenshotGalleryRef.current.clientWidth, behavior: "smooth" });
 
   useEffect(() => {
     if (!("IntersectionObserver" in window) || !mainRef.current) return;
@@ -176,6 +179,32 @@ export default function App() {
               <div className={styles.projectLinks}>
                 <a href="https://github.com/imandodo01/ai-engineering-standard" target="_blank" rel="noreferrer">Explore the standard ↗</a>
               </div>
+            </div>
+          </article>
+          <article className={styles.caseStudy}>
+            <div className={styles.caseStudyCopy}>
+              <p className={styles.eyebrow}>DATA ANALYSIS TOOL · INDEPENDENT PROJECT</p>
+              <h3>Retail Brand &amp; Category Report</h3>
+              <p>A local-first reporting application that turns a retail sales workbook into monthly brand and category analysis, with an optional editable PowerPoint business review.</p>
+              <div className={styles.tags}><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span><span>OpenPyXL</span><span>python-pptx</span></div>
+            </div>
+            <div className={styles.caseStudySlider}>
+              <div className={styles.caseStudyGallery} ref={screenshotGalleryRef} aria-label="Retail Brand and Category Report application screenshots" tabIndex={0} onScroll={(event) => setScreenshotIndex(Math.round(event.currentTarget.scrollLeft / event.currentTarget.clientWidth))}>
+                <figure><img src="/images/retail-report-generator/image1.png" alt="Workbook upload, worksheet selection, and data validation dashboard" loading="lazy" /><figcaption>01 / Workbook intake &amp; validation</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image2.png" alt="Controller main category subtotal and subcategory monthly growth tables" loading="lazy" /><figcaption>02 / Controller category growth</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image3.png" alt="Accessories category monthly net sales and quantity growth table" loading="lazy" /><figcaption>03 / Accessories category growth</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image4.png" alt="Product attribute extraction coverage in the presentation generator" loading="lazy" /><figcaption>04 / Product attributes &amp; presentation</figcaption></figure>
+              </div>
+              <div className={styles.caseStudySliderControls}>
+                <span>Screenshot {screenshotIndex + 1} / 4</span>
+                <div><button type="button" aria-label="Previous screenshot" onClick={() => scrollScreenshot(-1)} disabled={screenshotIndex === 0}>←</button><button type="button" aria-label="Next screenshot" onClick={() => scrollScreenshot(1)} disabled={screenshotIndex === 3}>→</button></div>
+              </div>
+            </div>
+            <div className={styles.caseStudyDetails}>
+              <div><h4>Workbook validation</h4><p>Checks required sales columns, normalizes input fields, and surfaces warnings while retaining negative values and repeated rows instead of silently rewriting source data.</p></div>
+              <div><h4>Monthly reporting</h4><p>Groups performance by brand and category, calculates month-over-month growth, and keeps market share scoped to the uploaded workbook.</p></div>
+              <div><h4>Product intelligence</h4><p>Extracts recognizable product attributes conservatively from product names; uncertain values remain blank rather than being guessed.</p></div>
+              <div><h4>Editable business review</h4><p>Generates a chart-focused PowerPoint presentation from the selected workbook for further editing.</p></div>
             </div>
           </article>
         </section>

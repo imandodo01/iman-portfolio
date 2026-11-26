@@ -12,7 +12,7 @@ This document tracks content separately from layout so wording can change as new
 |---|---|---|
 | Qraft | Publish | Personal product; v1.0.0 released 2026-11-10. |
 | AI Engineering Standard | Publish | Personal engineering methodology / developer resource; public repository, licensed CC BY 4.0. Not an application or framework. |
-| Other personal projects | Hold | Revisit when there is a meaningful portfolio update and verified project information. |
+| Retail Brand & Category Report | Publish | Independent Python/Streamlit reporting tool; public screenshots approved by the user. Source repository remains private and is not linked. |
 | Employer / professional work | Hold | Publish only after contribution scope and disclosure permission are confirmed. |
 | Engineering Notes | Hidden / deferred | Not shown in the current navigation or page. Reintroduce only when there is at least one publishable note or a clear content plan. |
 | Contact details | Publish | Email: iman.dodo01@gmail.com; LinkedIn: https://www.linkedin.com/in/iman-sujatmiko/. |
@@ -78,6 +78,17 @@ All wording below is a working text kit. It can be rewritten when the user has n
 - Release: https://github.com/imandodo01/Qraft/releases/tag/v1.0.0
 
 **Publication note:** Keep Qraft as the personal product entry. Revisit this entry if a new release materially changes its features or status. Do not claim that future backlog ideas are shipped.
+
+#### Retail Brand & Category Report — current project entry
+
+- Type: Independent data analysis and reporting application.
+- Technology: Python 3.11, Streamlit, Pandas, Plotly, OpenPyXL, and python-pptx.
+- Scope: Workbook validation; monthly brand development and growth; category growth with main-category subtotals and category detail; brand market share within the uploaded dataset; product attribute coverage; editable PowerPoint business review.
+- Data handling: Negative values and repeated rows are retained and surfaced as validation warnings. Product attributes are extracted conservatively; uncertain values remain blank. Uploaded workbooks are processed in the running app and are not intentionally persisted.
+- Public media: Four approved application screenshots at `/images/retail-report-generator/image1.png` through `image4.png`.
+- Source repository: Private; intentionally not linked from the public portfolio.
+
+**Publication note:** The screenshots illustrate application workflows and sample workbook output, not independently verified business outcomes. Do not publish source workbooks or imply external market-share coverage.
 
 #### AI Engineering Standard — current engineering resource entry
 

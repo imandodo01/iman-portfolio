@@ -407,3 +407,27 @@
   .resourceFeature { grid-template-columns: 1fr; }
   .resourceMark { min-height: 4rem; }
 }
+
+
+.caseStudy { margin-top: 2rem; padding: clamp(1rem, 2.5vw, 2rem); border: 1px solid rgb(176 141 87 / 28%); background: linear-gradient(120deg, rgb(36 39 37 / 78%), rgb(23 24 23 / 55%)); }
+.caseStudyCopy { max-width: 58rem; }
+.caseStudyCopy h3 { margin: .65rem 0; font: 500 clamp(1.7rem, 3vw, 2.5rem) var(--font-heading); }
+.caseStudyCopy > p:not(.eyebrow) { max-width: 52rem; color: var(--color-muted); font-size: .9rem; line-height: 1.75; }
+.caseStudySlider { margin-top: 1.5rem; }
+.caseStudyGallery { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--color-brass) var(--color-charcoal); overscroll-behavior-inline: contain; }
+.caseStudyGallery figure { flex: 0 0 88%; min-width: 0; margin: 0 auto; border: 1px solid rgb(176 141 87 / 20%); background: var(--color-charcoal); scroll-snap-align: center; }
+.caseStudyGallery img { display: block; width: 100%; max-height: 30rem; aspect-ratio: 16 / 9; object-fit: contain; background: #171817; }
+.caseStudyGallery figcaption { padding: .65rem .75rem; color: var(--color-muted); font: .58rem var(--font-mono); letter-spacing: .04em; }
+.caseStudySliderControls { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-top: .75rem; color: var(--color-muted); font: .58rem var(--font-mono); }
+.caseStudySliderControls div { display: flex; gap: .5rem; }
+.caseStudySliderControls button { width: 2.5rem; height: 2.5rem; border: 1px solid rgb(176 141 87 / 40%); background: transparent; color: var(--color-ivory); cursor: pointer; font-size: 1.1rem; }
+.caseStudySliderControls button:hover { background: rgb(176 141 87 / 14%); color: var(--color-brass); }
+.caseStudyDetails { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; margin-top: 1.5rem; padding-top: 1.3rem; border-top: var(--border-subtle); }
+.caseStudyDetails h4 { margin: 0; font: 500 1rem var(--font-heading); }
+.caseStudyDetails p { margin: .45rem 0 0; color: var(--color-muted); font-size: .82rem; line-height: 1.7; }
+@media (max-width: 680px) { .caseStudyDetails { grid-template-columns: 1fr; } .caseStudySliderControls { align-items: center; } }
+
+@media (max-width: 680px) {
+  .caseStudyGallery figure { flex-basis: 100%; }
+  .caseStudyGallery img { max-height: 22rem; }
+}

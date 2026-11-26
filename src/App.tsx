@@ -185,11 +185,17 @@ export default function App() {
               <p>A local-first reporting application that turns a retail sales workbook into monthly brand and category analysis, with an optional editable PowerPoint business review.</p>
               <div className={styles.tags}><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span><span>OpenPyXL</span><span>python-pptx</span></div>
             </div>
-            <div className={styles.caseStudyGallery} aria-label="Retail Brand and Category Report application screenshots">
-              <figure><img src="/images/retail-report-generator/image1.png" alt="Workbook upload, worksheet selection, and data validation dashboard" loading="lazy" /><figcaption>Workbook intake &amp; validation</figcaption></figure>
-              <figure><img src="/images/retail-report-generator/image2.png" alt="Controller main category subtotal and subcategory monthly growth tables" loading="lazy" /><figcaption>Controller category growth</figcaption></figure>
-              <figure><img src="/images/retail-report-generator/image3.png" alt="Accessories category monthly net sales and quantity growth table" loading="lazy" /><figcaption>Accessories category growth</figcaption></figure>
-              <figure><img src="/images/retail-report-generator/image4.png" alt="Product attribute extraction coverage in the presentation generator" loading="lazy" /><figcaption>Product attributes &amp; presentation</figcaption></figure>
+            <div className={styles.caseStudySlider}>
+              <div className={styles.caseStudyGallery} aria-label="Retail Brand and Category Report application screenshots" tabIndex={0}>
+                <figure><img src="/images/retail-report-generator/image1.png" alt="Workbook upload, worksheet selection, and data validation dashboard" loading="lazy" /><figcaption>01 / Workbook intake &amp; validation</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image2.png" alt="Controller main category subtotal and subcategory monthly growth tables" loading="lazy" /><figcaption>02 / Controller category growth</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image3.png" alt="Accessories category monthly net sales and quantity growth table" loading="lazy" /><figcaption>03 / Accessories category growth</figcaption></figure>
+                <figure><img src="/images/retail-report-generator/image4.png" alt="Product attribute extraction coverage in the presentation generator" loading="lazy" /><figcaption>04 / Product attributes &amp; presentation</figcaption></figure>
+              </div>
+              <div className={styles.caseStudySliderControls}>
+                <span>Swipe or scroll to explore screenshots</span>
+                <div><button type="button" aria-label="Previous screenshot" onClick={() => document.querySelector('.caseStudyGallery')?.scrollBy({ left: -((document.querySelector('.caseStudyGallery') as HTMLElement | null)?.clientWidth ?? 0), behavior: "smooth" })}>←</button><button type="button" aria-label="Next screenshot" onClick={() => document.querySelector('.caseStudyGallery')?.scrollBy({ left: (document.querySelector('.caseStudyGallery') as HTMLElement | null)?.clientWidth ?? 0, behavior: "smooth" })}>→</button></div>
+              </div>
             </div>
             <div className={styles.caseStudyDetails}>
               <div><h4>Workbook validation</h4><p>Checks required sales columns, normalizes input fields, and surfaces warnings while retaining negative values and repeated rows instead of silently rewriting source data.</p></div>

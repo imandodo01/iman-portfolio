@@ -4,9 +4,9 @@
 
 ## Project status
 
-The development foundation and initial portfolio structure are in place. The project is now in the **content refinement and pre-release** phase. Remaining work is editorial review, final quality review, and release preparation.
+The portfolio is deployed on Cloudflare Pages. The Projects section currently presents Qraft, AI Engineering Standard, and the Retail Brand & Category Report case study. The site is in post-deployment maintenance and ongoing content refinement.
 
-## Requirements
+**Live site:** https://iman-portfolio-brc.pages.dev/\n\n## Requirements
 
 - Node.js 22 LTS
 - npm 10 or compatible (npm 11.6.0 is recommended for the validated dependency tree)

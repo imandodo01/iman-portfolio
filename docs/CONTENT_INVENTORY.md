@@ -85,10 +85,10 @@ All wording below is a working text kit. It can be rewritten when the user has n
 - Technology: Python 3.11, Streamlit, Pandas, Plotly, OpenPyXL, and python-pptx.
 - Scope: Workbook validation; monthly brand development and growth; category growth with main-category subtotals and category detail; brand market share within the uploaded dataset; product attribute coverage; editable PowerPoint business review.
 - Data handling: Negative values and repeated rows are retained and surfaced as validation warnings. Product attributes are extracted conservatively; uncertain values remain blank. Uploaded workbooks are processed in the running app and are not intentionally persisted.
-- Public media: Four approved application screenshots at `/images/retail-report-generator/image1.png` through `image4.png`.
+- Public media: Four approved application screenshots at `/images/retail-report-generator/image1.png` through `image4.png`, served from `public/images/retail-report-generator/`.
 - Source repository: Private; intentionally not linked from the public portfolio.
 
-**Publication note:** The screenshots illustrate application workflows and sample workbook output, not independently verified business outcomes. Do not publish source workbooks or imply external market-share coverage.
+**Publication note:** The case study is published on the live portfolio. The screenshots illustrate application workflows and sample workbook output, not independently verified business outcomes. Do not publish source workbooks or imply external market-share coverage. The private source repository remains intentionally unlinked.
 
 #### AI Engineering Standard — current engineering resource entry
 

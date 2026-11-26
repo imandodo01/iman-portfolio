@@ -13,7 +13,7 @@ describe("Iman portfolio", () => {
     expect(markup).toContain("/images/retail-report-generator/image4.png");
     expect(markup).toContain("Previous screenshot");
     expect(markup).toContain("Next screenshot");
-    expect(markup).toContain("Swipe or scroll to explore screenshots");
+    expect(markup).toContain("Screenshot 1 / 4");
     expect(markup).toContain("Workbook validation");
     expect(markup).toContain("Editable business review");
     expect(markup).toContain("iman.dodo01@gmail.com");

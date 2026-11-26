@@ -1,6 +1,6 @@
 # Project Specification — Iman
 
-**Status:** Active — content refinement and pre-release  
+**Status:** Deployed — post-release maintenance and content refinement  
 **Product type:** Static frontend website  
 **Tagline:** Personal Software Engineering Portfolio
 
@@ -28,7 +28,7 @@ The current public page is a single-page portfolio with these sections:
 Name, concise professional positioning, introduction, and selected work.
 
 ### Projects
-Personal projects, engineering methodologies/resources, and approved professional case studies, with type, role, and contribution clearly stated. Qraft and AI Engineering Standard are currently selected public entries.
+Personal projects, engineering methodologies/resources, and approved professional case studies, with type, role, and contribution clearly stated. Qraft, AI Engineering Standard, and Retail Brand & Category Report are currently selected public entries.
 
 ### Experience
 Employment and responsibilities, described accurately and without disclosing confidential information. Do not invent missing roles, dates, responsibilities, or metrics.
@@ -62,7 +62,7 @@ Primary identity: the name Iman, supported by the steampunk skull artwork only i
 - Respect `prefers-reduced-motion`.
 - Optimize images; prefer appropriate modern formats and responsive sizing.
 - Avoid adding dependencies without a specific requirement.
-- Deployment target: Cloudflare Pages is the current proposal, pending repository and domain setup.
+- Deployment: Cloudflare Pages; live site: https://iman-portfolio-brc.pages.dev/.
 - Local verification is the current quality gate: clean lockfile install, lint, typecheck, tests, and production build. GitHub Actions is not part of the current scope.
 
 ## 7. Non-goals for the initial release

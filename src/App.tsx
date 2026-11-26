@@ -33,6 +33,9 @@ export default function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [active, setActive] = useState("#home");
   const mainRef = useRef<HTMLElement>(null);
+  const screenshotGalleryRef = useRef<HTMLDivElement>(null);
+  const [screenshotIndex, setScreenshotIndex] = useState(0);
+  const scrollScreenshot = (direction: number) => screenshotGalleryRef.current?.scrollBy({ left: direction * screenshotGalleryRef.current.clientWidth, behavior: "smooth" });
 
   useEffect(() => {
     if (!("IntersectionObserver" in window) || !mainRef.current) return;
@@ -186,15 +189,15 @@ export default function App() {
               <div className={styles.tags}><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span><span>OpenPyXL</span><span>python-pptx</span></div>
             </div>
             <div className={styles.caseStudySlider}>
-              <div className={styles.caseStudyGallery} aria-label="Retail Brand and Category Report application screenshots" tabIndex={0}>
+              <div className={styles.caseStudyGallery} ref={screenshotGalleryRef} aria-label="Retail Brand and Category Report application screenshots" tabIndex={0} onScroll={(event) => setScreenshotIndex(Math.round(event.currentTarget.scrollLeft / event.currentTarget.clientWidth))}>
                 <figure><img src="/images/retail-report-generator/image1.png" alt="Workbook upload, worksheet selection, and data validation dashboard" loading="lazy" /><figcaption>01 / Workbook intake &amp; validation</figcaption></figure>
                 <figure><img src="/images/retail-report-generator/image2.png" alt="Controller main category subtotal and subcategory monthly growth tables" loading="lazy" /><figcaption>02 / Controller category growth</figcaption></figure>
                 <figure><img src="/images/retail-report-generator/image3.png" alt="Accessories category monthly net sales and quantity growth table" loading="lazy" /><figcaption>03 / Accessories category growth</figcaption></figure>
                 <figure><img src="/images/retail-report-generator/image4.png" alt="Product attribute extraction coverage in the presentation generator" loading="lazy" /><figcaption>04 / Product attributes &amp; presentation</figcaption></figure>
               </div>
               <div className={styles.caseStudySliderControls}>
-                <span>Swipe or scroll to explore screenshots</span>
-                <div><button type="button" aria-label="Previous screenshot" onClick={() => document.querySelector('.caseStudyGallery')?.scrollBy({ left: -((document.querySelector('.caseStudyGallery') as HTMLElement | null)?.clientWidth ?? 0), behavior: "smooth" })}>←</button><button type="button" aria-label="Next screenshot" onClick={() => document.querySelector('.caseStudyGallery')?.scrollBy({ left: (document.querySelector('.caseStudyGallery') as HTMLElement | null)?.clientWidth ?? 0, behavior: "smooth" })}>→</button></div>
+                <span>Screenshot {screenshotIndex + 1} / 4</span>
+                <div><button type="button" aria-label="Previous screenshot" onClick={() => scrollScreenshot(-1)} disabled={screenshotIndex === 0}>←</button><button type="button" aria-label="Next screenshot" onClick={() => scrollScreenshot(1)} disabled={screenshotIndex === 3}>→</button></div>
               </div>
             </div>
             <div className={styles.caseStudyDetails}>

@@ -178,6 +178,26 @@ export default function App() {
               </div>
             </div>
           </article>
+          <article className={styles.caseStudy}>
+            <div className={styles.caseStudyCopy}>
+              <p className={styles.eyebrow}>DATA ANALYSIS TOOL · INDEPENDENT PROJECT</p>
+              <h3>Retail Brand &amp; Category Report</h3>
+              <p>A local-first reporting application that turns a retail sales workbook into monthly brand and category analysis, with an optional editable PowerPoint business review.</p>
+              <div className={styles.tags}><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Plotly</span><span>OpenPyXL</span><span>python-pptx</span></div>
+            </div>
+            <div className={styles.caseStudyGallery} aria-label="Retail Brand and Category Report application screenshots">
+              <figure><img src="/images/retail-report-generator/image1.png" alt="Workbook upload, worksheet selection, and data validation dashboard" loading="lazy" /><figcaption>Workbook intake &amp; validation</figcaption></figure>
+              <figure><img src="/images/retail-report-generator/image2.png" alt="Controller main category subtotal and subcategory monthly growth tables" loading="lazy" /><figcaption>Controller category growth</figcaption></figure>
+              <figure><img src="/images/retail-report-generator/image3.png" alt="Accessories category monthly net sales and quantity growth table" loading="lazy" /><figcaption>Accessories category growth</figcaption></figure>
+              <figure><img src="/images/retail-report-generator/image4.png" alt="Product attribute extraction coverage in the presentation generator" loading="lazy" /><figcaption>Product attributes &amp; presentation</figcaption></figure>
+            </div>
+            <div className={styles.caseStudyDetails}>
+              <div><h4>Workbook validation</h4><p>Checks required sales columns, normalizes input fields, and surfaces warnings while retaining negative values and repeated rows instead of silently rewriting source data.</p></div>
+              <div><h4>Monthly reporting</h4><p>Groups performance by brand and category, calculates month-over-month growth, and keeps market share scoped to the uploaded workbook.</p></div>
+              <div><h4>Product intelligence</h4><p>Extracts recognizable product attributes conservatively from product names; uncertain values remain blank rather than being guessed.</p></div>
+              <div><h4>Editable business review</h4><p>Generates a chart-focused PowerPoint presentation from the selected workbook for further editing.</p></div>
+            </div>
+          </article>
         </section>
 
         <div className={styles.overviewGrid}>

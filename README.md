@@ -6,7 +6,9 @@
 
 The portfolio is deployed on Cloudflare Pages. The Projects section currently presents Qraft, AI Engineering Standard, and the Retail Brand & Category Report case study. The site is in post-deployment maintenance and ongoing content refinement.
 
-**Live site:** https://iman-portfolio-brc.pages.dev/\n\n## Requirements
+**Live site:** https://iman-portfolio-brc.pages.dev/
+
+## Requirements
 
 - Node.js 22 LTS
 - npm 10 or compatible (npm 11.6.0 is recommended for the validated dependency tree)
